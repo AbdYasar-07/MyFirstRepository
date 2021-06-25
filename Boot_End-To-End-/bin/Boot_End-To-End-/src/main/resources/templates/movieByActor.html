@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Actor--Movies</title>
+</head>
+<body>
+	
+	<h1>Actor Name <span th:text = "${actorName}"></span>  </h1>
+	
+	
+	<table>
+		<thead>
+			<tr>
+				<td>MOVIE NAME</td>
+				<td>MOVIE DESCRIPTION</td>
+				<td>HERO OF MOVIE</td>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="hero : ${heroOfMovie}">
+				<td th:text="${hero.movieName}">#</td>
+				<td th:text="${hero.movieDescription}">#</td>
+				<td th:text="${hero.heroOfMovie}">#</td>
+			</tr>
+		</tbody>
+	
+	
+	
+	
+	
+	
+	</table>
+		
+
+
+</body>
+</html>
